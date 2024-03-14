@@ -1,7 +1,29 @@
+import random
 def cachipun():
-    """
-    Esta función representa el juego de cachipun.
-    Debes pedir al usuario que elija piedra, papel o tijera, y luego comparar su elección con la de la computadora.
-    La computadora debe elegir una opción al azar.
-    """
-    pass
+    j=str(input("Elija piedra, papel o tijera"))
+    lista=["tijera","piedra","papel"]
+    r=random.randint(0,2)
+    c=lista[r]
+    print("La computadora elije:")
+    print(c)
+    if c==j:
+        return "Empate"
+    elif j=="piedra":
+        if c=="tijera":
+            return "Ganaste!"
+        else: 
+            return "Perdiste" 
+    elif j=="tijera":
+        if c=="papel":
+            return "Ganaste!"
+        else: 
+            return "Perdiste"
+    elif j=="papel":
+        if c=="piedra":
+            return "Ganaste!"
+        else: 
+            return "Perdiste"
+    
+n=cachipun()
+print(n)
+       
